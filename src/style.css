@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=McLaren&family=Raleway:wght@300&family=Roboto+Condensed&display=swap');
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #013220;
+    background-color: #F6FFF8;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+
+    display: flex;
+    width: 500px;
+    height: 500px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 3px solid #6B9080;
+    border-radius: 33px;
+    height: 130px;
+    width: 130px;
+    text-align: center;
+    font-size: 16px;
+    transition: all 2s ease;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 30px;
+}
+
+.front {
+    z-index: 2;
+    background-color: #A4C3B2;
+
+}
+
+.back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    background-color: #CCE3DE;
+}
+
